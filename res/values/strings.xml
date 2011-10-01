@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SOflair</string>
+    <string name="gravatar_uri">http://www.gravatar.com/avatar/%1$s?s=%2$d&amp;d=identicon</string>
+    <string name="recent_uri">http://%1$s/users/%2$d?tab=reputation</string>
+</resources>
