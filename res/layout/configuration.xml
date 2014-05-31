@@ -14,7 +14,7 @@
 		android:id="@+id/userFlairUrl"
 		android:layout_width="fill_parent" 
 		android:layout_height="wrap_content"
-		android:text="http://api.stackoverflow.com/1.1/users/22656"/>
+		android:text="https://api.stackexchange.com/2.2/users/22656?site=stackoverflow"/>
 	<Button
 		android:id="@+id/ok"
 		android:text="Add Flair Widget"

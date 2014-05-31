@@ -121,14 +121,12 @@ public class SOHelper {
 		JSONObject json = new JSONObject(src);
 		FlairInfo flair = new FlairInfo();
 		
-		JSONObject user = json.getJSONArray("users").getJSONObject(0);
+		JSONObject user = json.getJSONArray("items").getJSONObject(0);
 		
 		flair.setUserId(user.getLong("user_id"));
 		
 		try {
-			flair.setAvatarURI(new URI(String.format(
-				context.getString(org.ocactus.soflair.R.string.gravatar_uri),
-				user.getString("email_hash"), calcAvatarSize(context))));
+			flair.setAvatarURI(new URI(user.getString("profile_image")));
 			
 			flair.setProfileUrl(URI.create(String.format(
 				context.getString(org.ocactus.soflair.R.string.recent_uri),
