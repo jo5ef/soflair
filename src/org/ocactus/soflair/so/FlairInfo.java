@@ -93,7 +93,7 @@ public class FlairInfo {
 	public String getReputationDisplayString() {
 		NumberFormat numberFormat = NumberFormat.getInstance(Locale.US);
 		numberFormat.setMaximumFractionDigits(1);
-		if(reputation < 10000) {
+		if(reputation < 100000) {
 			return numberFormat.format(reputation);
 		} else {
 			return numberFormat.format(reputation / 1000.0) + "k";

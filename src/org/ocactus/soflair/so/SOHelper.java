@@ -42,6 +42,11 @@ public class SOHelper {
 				Log.i(TAG, String.format("using cached json (%s)", uri));
 			}
 			
+			if(jsonSource == null) {
+				Log.e(TAG, "couldn't retrieve json");
+				return null;
+			}
+			
 			FlairInfo flair = parseFlair(context, uri, jsonSource);
 			
 			Bitmap avatar = downloadBitmap(flair.getAvatarURI());
