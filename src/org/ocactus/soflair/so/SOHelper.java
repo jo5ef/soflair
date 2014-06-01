@@ -145,11 +145,6 @@ public class SOHelper {
 		return flair;
 	}
 	
-	private static int calcAvatarSize(Context context) {
-		DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
-		return (int) (60f * displayMetrics.density + 0.5f);
-	}
-	
 	private static String downloadJson(URI uri) {
 		try {
 			Log.i(TAG, "downloading user flair from " + uri);
