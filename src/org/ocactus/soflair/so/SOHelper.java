@@ -128,9 +128,7 @@ public class SOHelper {
 		try {
 			flair.setAvatarURI(new URI(user.getString("profile_image")));
 			
-			flair.setProfileUrl(URI.create(String.format(
-				context.getString(org.ocactus.soflair.R.string.recent_uri),
-				uri.getHost().replace("api.", ""), flair.getUserId())));
+			flair.setProfileUrl(URI.create(user.getString("link")));
 			
 		} catch(URISyntaxException ex) {
 			Log.w(TAG, "invalid uri (" + ex.getMessage() + ")");
